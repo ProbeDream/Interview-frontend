@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      html,body{margin: 0;padding: 0;box-sizing:border-box;}  
+      .content1 {
+          width: 200px;height: 200px;border:1px dashed darkblue;
+          position: absolute;top: 50px;left: 50px;  
+      }
+      .content2{
+          width: 200px;height: 200px;border:1px dashed darkgray;
+          position: relative;top: 100px;left: 100px;
+      }
+      .content3{
+          width: 200px;height: 200px;border:1px dashed darkcyan;
+          position: fixed;top: 150px;right: 0;
+      }
+      span{color:darkorange;}
+      .content4{
+          width: 200px;height: 200px;background-color: darkblue;position: relative;top: 50%;left: 50%;       
+      }
+      .content5{
+          width: 100px;height: 100px;background-color: darkorange;position: absolute;top: 25%;left: 25%;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+      <!-- 
+        设定了position:absolute的元素 会根据最近定位属性的父包含块进行定位!
+        如果说没有的话 就是用body作为父包含块进行定位!
+        
+        对应的relative就是按照static(float)的方式生成一个元素并且元素像层一样浮动起来,然后在进行移动操作!
+        对应的fixed表示对应的固定定位,是相对于视图本身(浏览器窗口)定位!
+      -->
+    <div class="content1">content1</div>
+    <div class="content2">content2</div><span>我就知道对应的relative元素占位了,害我下来了!</span>
+    <div class="content3">content3</div>  
+    <div class="content4">
+        content4
+        <div class="content5">content5</div>
+    </div>  
+</body>
+</html>

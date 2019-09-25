@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    *{margin: 0;padding: 0;box-sizing:border-box;}
+    .main,.left,.right{float: left;height: 300px;}
+    .main{width: 100%;}
+    .main .main-inner{
+        background-color: darkblue;
+        height: 100%;
+        margin-left: 200px;
+        margin-right: 220px;
+    }
+    .left{background-color: yellow;width: 200px;margin-left: -100%;}
+    .right{background-color: red;width: 220px;margin-left: -220px;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        其实就是利用的块级元素的特性 对应的将main作为内容主要部分,将两边撑开,并且给定大小该大小就是 mg撑开的距离!
+        因为按照布局顺序对应的 left和right在main右边 因此 left需要借助 mgl -100% 从右边到左边的位置来 并且对应的 mgl的距离就是left类的大小!
+        右边的话就是剩下的位置!
+        中间的内容不要写宽度就写高度就行了! 其余的使用mg撑开 两侧使用宽度写死然后使用mgl补全!
+    -->
+    <div class="main">
+        <div class="main-inner"></div>
+    </div>
+    <div class="left"></div>
+    <div class="right"></div>   
+</body>
+</html>
